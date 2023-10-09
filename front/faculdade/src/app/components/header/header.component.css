@@ -1,0 +1,24 @@
+img{
+    height: 50px;
+}
+
+.header{
+    background-color: rgba(196, 241, 255, 0.267);
+    justify-content: left;
+}
+
+span{
+    display: flex;
+    align-items: center;
+    color: rgb(17, 74, 148);
+    padding: 5px;
+}
+
+a{
+    font-style: italic;
+}
+
+h2{
+    font-size: 1.7rem;
+    padding-left: 20px;
+}

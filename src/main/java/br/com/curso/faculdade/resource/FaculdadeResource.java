@@ -5,6 +5,7 @@ import java.util.List;
 
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.http.ResponseEntity;
+import org.springframework.web.bind.annotation.CrossOrigin;
 import org.springframework.web.bind.annotation.DeleteMapping;
 import org.springframework.web.bind.annotation.GetMapping;
 import org.springframework.web.bind.annotation.PathVariable;
@@ -18,6 +19,7 @@ import org.springframework.web.servlet.support.ServletUriComponentsBuilder;
 import br.com.curso.faculdade.entities.Aluno;
 import br.com.curso.faculdade.services.FaculdadeService;
 
+@CrossOrigin(origins = "*", maxAge = 33600)
 @RestController
 @RequestMapping(value = "/faculdade")
 public class FaculdadeResource {

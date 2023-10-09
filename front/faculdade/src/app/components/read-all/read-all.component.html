@@ -1,0 +1,28 @@
+<div class="container">
+    <div class="badge">
+        <button mat-raised-button color="warn" matBadge="{{ativo}}">
+            Alunos Ativos: 
+        </button>
+    </div>
+    <button class="novo mat-elevation-z5" mat-raised-button color="primary">Novo</button>
+    <div class="conteudo" *ngFor="let item of list">
+        <mat-card class="card mat-elevation-z3">
+        <mat-card-header>
+            <mat-card-title>{{item.nome}}</mat-card-title>
+            <mat-card-subtitle>{{item.dataCadastro}}</mat-card-subtitle>
+            <mat-card-subtitle>{{item.ativo}}</mat-card-subtitle>
+        </mat-card-header>
+        <div class="acoes">
+            <button mat-mini-fab color="primary" id="gravar">
+                <mat-icon>done</mat-icon>
+            </button>
+            <button mat-mini-fab color="accent" id="editar">
+                <mat-icon>edit</mat-icon>
+            </button>
+            <button mat-mini-fab color="warn" id="apagar">
+                <mat-icon>delete</mat-icon>
+            </button>
+        </div>
+        </mat-card>
+    </div>
+</div>
