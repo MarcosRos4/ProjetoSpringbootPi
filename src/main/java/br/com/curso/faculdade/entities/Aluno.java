@@ -1,8 +1,6 @@
 package br.com.curso.faculdade.entities;
 
 import java.io.Serializable;
-import java.util.Date;
-
 import jakarta.persistence.Column;
 import jakarta.persistence.Entity;
 import jakarta.persistence.GeneratedValue;
@@ -21,25 +19,64 @@ public class Aluno implements Serializable{
     @Column (name = "Nome")
     String nome;
 
-    Date dataCadastro;    
+    @Column (name = "CEP")
+    String cep;
+    
+    @Column (name = "Numero")
+    String numero;
+
+    @Column (name = "Complemento")
+    String complemento;
+
+    @Column (name = "notaAdo1")
+    Float notaAdo1;
+
+    @Column (name = "notaPI")
+    Float notaPI;
 
     @Column (name = "Matricula")
     boolean ativo;
     
-    public Aluno(String nome, Date dataCadastro, boolean ativo) {
+    public Aluno(String nome, String cep, String numero, String complemento, Float notaAdo1, Float notaPI, boolean ativo) {
         this.nome = nome;
-        this.dataCadastro = dataCadastro;
+        this.cep = cep;
+        this.numero = numero;
+        this.complemento = complemento;
+        this.notaAdo1 = notaAdo1;
+        this.notaPI = notaPI;
         this.ativo = ativo;
     }
     
-    public Aluno(String nome, Date dataCadastro) {
+    
+
+    public Aluno(String nome, String cep, String numero, String complemento) {
         this.nome = nome;
-        this.dataCadastro = dataCadastro;
+        this.cep = cep;
+        this.numero = numero;
+        this.complemento = complemento;
     }
+
+
+
+    public Aluno(int ra, String nome, Float notaAdo1, Float notaPI, boolean ativo) {
+        this.ra = ra;
+        this.nome = nome;
+        this.notaAdo1 = notaAdo1;
+        this.notaPI = notaPI;
+        this.ativo = ativo;
+    }
+
+
 
     public Aluno() {
     }
 
+    @Override
+    public String toString() {
+        return "Aluno [ra=" + ra + ", nome=" + nome + ", cep=" + cep + ", numero=" + numero + ", complemento="
+                + complemento + ", notaAdo1=" + notaAdo1 + ", notaPI=" + notaPI + ", ativo=" + ativo + "]";
+    }
+    
     public static long getSerialversionuid() {
         return serialVersionUID;
     }
@@ -60,12 +97,44 @@ public class Aluno implements Serializable{
         this.nome = nome;
     }
 
-    public Date getDataCadastro() {
-        return dataCadastro;
+    public String getCep() {
+        return cep;
     }
 
-    public void setDataCadastro(Date dataCadastro) {
-        this.dataCadastro = dataCadastro;
+    public void setCep(String cep) {
+        this.cep = cep;
+    }
+
+    public String getNumero() {
+        return numero;
+    }
+
+    public void setNumero(String numero) {
+        this.numero = numero;
+    }
+
+    public String getComplemento() {
+        return complemento;
+    }
+
+    public void setComplemento(String complemento) {
+        this.complemento = complemento;
+    }
+
+    public Float getNotaAdo1() {
+        return notaAdo1;
+    }
+
+    public void setNotaAdo1(Float notaAdo1) {
+        this.notaAdo1 = notaAdo1;
+    }
+
+    public Float getNotaPI() {
+        return notaPI;
+    }
+
+    public void setNotaPI(Float notaPI) {
+        this.notaPI = notaPI;
     }
 
     public boolean isAtivo(){
@@ -76,8 +145,5 @@ public class Aluno implements Serializable{
         this.ativo = ativo;
     }
 
-    @Override
-    public String toString() {
-        return "Aluno [ra=" + ra + ", nome=" + nome + ", dataCadastro=" + dataCadastro + "]";
-    }
+    
 }

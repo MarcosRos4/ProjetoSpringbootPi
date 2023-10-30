@@ -51,7 +51,11 @@ public class FaculdadeService {
         Aluno alterado = findById(ra);
         if(alterado != null){
             alterado.setNome(aluno.getNome());
-            alterado.setDataCadastro(aluno.getDataCadastro());
+            alterado.setCep(aluno.getCep());
+            alterado.setComplemento(aluno.getComplemento());
+            alterado.setNumero(aluno.getNumero());
+            alterado.setNotaAdo1(aluno.getNotaAdo1());
+            alterado.setNotaPI(aluno.getNotaPI());
             alterado.setAtivo(aluno.isAtivo());
             return alunoRepository.save(alterado);
         }        

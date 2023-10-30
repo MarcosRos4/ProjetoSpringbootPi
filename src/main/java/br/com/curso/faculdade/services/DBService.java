@@ -23,12 +23,10 @@ public class DBService {
 
     @Bean
     public void instanciarDBAluno() throws ParseException{
-        SimpleDateFormat formato = new SimpleDateFormat("dd/MM/yyyy");
-		Aluno aluno1 = new Aluno("João Victor Matulis",  formato.parse("02/06/2003"), true);
-        Aluno aluno2 = new Aluno("Lucas Matulis",  formato.parse("02/03/2002"), true);
-        Aluno aluno3 = new Aluno("Leonardo Matulis",  formato.parse("13/12/2004"), true);
-        Aluno aluno4 = new Aluno("Pedro Augusto Matulis",  formato.parse("15/10/1970"), false);
-		alunoRepository.saveAll(Arrays.asList(aluno1, aluno2, aluno3, aluno4));
+
+		Aluno aluno1 = new Aluno("Marc", "000-000-00", "400", "motel");
+
+		alunoRepository.saveAll(Arrays.asList(aluno1));
     }
 
     @Bean
