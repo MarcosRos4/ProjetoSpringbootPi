@@ -35,6 +35,9 @@ export class ProdutoComponent {
 
   id?:number
 
+  ngOnInit(): void {
+    this.buscarProdutos()
+  }
   
 
   criarProduto(){
@@ -47,7 +50,9 @@ export class ProdutoComponent {
 
 
     if(this.produto.nome != '' && this.produto.preco != undefined ) this.produtoservice.inserirProduto(this.produto)
-    .subscribe( ( error ) => { if ( error ) console.log( error )});
+    .subscribe( ( error ) => { 
+      this.buscarProdutos()
+      if ( error ) console.log( error )});
     
     else
     this.snackBar.open("O Nome do produto ou preço esta vazio!", "OK!");
@@ -69,6 +74,7 @@ export class ProdutoComponent {
     if(this.produto2 != undefined) this.produtoservice.atualizarProduto(this.produto2, this.produto2.id)
     .subscribe(
       res => {
+        this.buscarProdutos()
         console.log(res);
       },
       erro => {
@@ -87,6 +93,7 @@ export class ProdutoComponent {
     if(this.id != undefined) this.produtoservice.removerProduto(this.id)
     .subscribe({
       next: (res) => {
+        this.buscarProdutos()
         if( res ) console.log(res);
 
       },

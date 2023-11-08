@@ -1,1 +1,33 @@
-<p>produto works!</p>
+<div>
+    <div>
+        <h3>Inserir</h3>
+        <input placeholder="Nome" [(ngModel)]="produto.nome"> <br>
+        <input placeholder="Preço" [(ngModel)]="produto.preco"> <br>
+        <input placeholder="Imagem" [(ngModel)]="produto.imagem"> <br>
+        <input placeholder="Descrição" [(ngModel)]="produto.descricao"> <br>
+        <button (click)="criarProduto()">criar</button>
+    </div>
+    <br>
+    <div>
+        <h3>Atualizar</h3>
+        <input placeholder="id" [(ngModel)]="produto2.id"> <br>
+        <input placeholder="Nome" [(ngModel)]="produto2.nome"> <br>
+        <input placeholder="Preço" [(ngModel)]="produto2.preco"> <br>
+        <input placeholder="imagem" [(ngModel)]="produto2.imagem"> <br>
+        <input placeholder="Descrição" [(ngModel)]="produto2.descricao"> <br>
+        <button (click)="atualizarProduto()">atualizar</button>
+    </div>
+    <br>
+    <div>
+        <h3>Deletar</h3>
+        <input placeholder="id" [(ngModel)]="id"> <br>
+        <button (click)="removerProduto()">deletar</button>
+    </div>
+    <ul>
+        <li *ngFor="let produto of produtos">
+                    <span class="botao-editar">{{produto.nome}} - {{produto.preco}} - {{produto.imagem}} - {{produto.descricao}} - {{produto.id}}</span>
+        </li>
+    </ul>
+</div>
+
+
