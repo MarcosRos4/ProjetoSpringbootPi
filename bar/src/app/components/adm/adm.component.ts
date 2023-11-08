@@ -1,4 +1,4 @@
-import { Component } from '@angular/core';
+import { Component, OnInit } from '@angular/core';
 import { Adm } from 'src/app/model/adm';
 import { AdmService } from 'src/app/services/adm/adm.service';
 import { MatSnackBar } from '@angular/material/snack-bar';
@@ -11,7 +11,7 @@ import { catchError, of } from 'rxjs';
   templateUrl: './adm.component.html',
   styleUrls: ['./adm.component.css']
 })
-export class AdmComponent {
+export class AdmComponent implements OnInit{
 
   constructor(
     private admservice:AdmService,
@@ -48,7 +48,10 @@ export class AdmComponent {
     this.adm.senha = this.adm.senha?.trim();
 
     if(this.adm.nome != '' && this.adm.senha != '' ) this.admservice.inserirAdm(this.adm)
-    .subscribe( ( error ) => { if ( error ) console.log( error )});
+    .subscribe( ( error ) => { 
+    this.buscarAdms();
+    if ( error ) 
+      console.log( error )});
     
     else
     this.snackBar.open("O Nome do adm ou a senha esta vazio!", "OK!");
@@ -68,6 +71,7 @@ export class AdmComponent {
     if(this.adm2 != undefined) this.admservice.atualizarAdm(this.adm2, this.adm2.id)
     .subscribe(
       res => {
+        this.buscarAdms();
         console.log(res);
       },
       erro => {

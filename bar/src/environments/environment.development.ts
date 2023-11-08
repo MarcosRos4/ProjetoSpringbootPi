@@ -1,4 +1,4 @@
 export const environment = {
     mock: false,
-    urlApi: 'http://localhost:8080/'
+    urlApi: 'http://localhost:2319/'
   };
