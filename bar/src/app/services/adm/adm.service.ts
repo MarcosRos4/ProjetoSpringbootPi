@@ -18,7 +18,7 @@ export class AdmService {
     return this.http.post<boolean>(`${environment.urlApi}/adm`, adm)
   }
 
-  buscarAdms(id_materia?: number): Observable<Adm[]> {
+  buscarAdms(): Observable<Adm[]> {
     return this.http.get<Adm[]>(`${environment.urlApi}/adm`);
   }
 

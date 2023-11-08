@@ -51,9 +51,9 @@ export class AdmComponent {
   }
 
   atualizarAdm(){
-    this.adm2.ID = this.adm.ID;
-    this.adm2.Nome = this.adm.Nome?.trim();
-    this.adm2.Senha = this.adm.Senha?.trim();
+    this.adm2.ID = this.adm2.ID;
+    this.adm2.Nome = this.adm2.Nome?.trim();
+    this.adm2.Senha = this.adm2.Senha?.trim();
 
     if( this.adm2.Nome.length == 0 || this.adm2.Senha?.length == 0 ) {
       this.snackBar.open("O nome do adm ou a senha esta vazio!", "OK!");

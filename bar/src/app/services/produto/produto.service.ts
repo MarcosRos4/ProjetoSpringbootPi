@@ -17,6 +17,10 @@ export class ProdutoService {
     return this.http.post<boolean>(`${environment.urlApi}/produto`, produto)
   }
 
+  buscarProduto(): Observable<Produto[]> {
+    return this.http.get<Produto[]>(`${environment.urlApi}/produto`);
+  }
+
   buscarProdutoId(id? : number): Observable <number | undefined>{
 
     if(!id) return of (undefined);
