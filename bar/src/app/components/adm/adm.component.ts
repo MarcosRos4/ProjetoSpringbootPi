@@ -90,6 +90,7 @@ export class AdmComponent implements OnInit{
     if(this.id != undefined) this.admservice.removerAdm(this.id)
     .subscribe({
       next: (res) => {
+        this.buscarAdms()
         if( res ) console.log(res);
 
       },
