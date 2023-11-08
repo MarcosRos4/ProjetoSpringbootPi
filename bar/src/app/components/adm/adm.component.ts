@@ -34,6 +34,11 @@ export class AdmComponent {
 
   id?:number
 
+
+  ngOnInit(): void {
+    this.buscarAdms()
+  }
+
   
 
   criarAdm(){
