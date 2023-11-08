@@ -1,5 +1,5 @@
 export interface Adm {
-    ID: number;
-    Nome:string;
-    Senha:string;
+    id: number;
+    nome:string;
+    senha:string;
   }

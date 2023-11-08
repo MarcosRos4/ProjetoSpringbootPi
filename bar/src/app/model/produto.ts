@@ -1,7 +1,7 @@
 export interface Produto {
-    ID: number;
-    Nome:string;
-    Preco:number;
-    Imagem:string;
-    Descricao:string;
+    id: number;
+    nome:string;
+    preco:number;
+    imagem:string;
+    descricao:string;
   }

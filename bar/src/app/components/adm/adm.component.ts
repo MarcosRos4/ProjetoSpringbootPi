@@ -21,15 +21,15 @@ export class AdmComponent {
   adms?: Adm[];
 
   adm: Adm={
-    ID:0,
-    Nome:"",
-    Senha:""
+    id:0,
+    nome:"",
+    senha:""
   }
 
   adm2: Adm={
-    ID:0,
-    Nome:"",
-    Senha:""
+    id:0,
+    nome:"",
+    senha:""
   }
 
   id?:number
@@ -43,11 +43,11 @@ export class AdmComponent {
 
   criarAdm(){
 
-    this.adm.ID = this.adm.ID;
-    this.adm.Nome = this.adm.Nome?.trim();
-    this.adm.Senha = this.adm.Senha?.trim();
+    this.adm.id = this.adm.id;
+    this.adm.nome = this.adm.nome?.trim();
+    this.adm.senha = this.adm.senha?.trim();
 
-    if(this.adm.Nome != '' && this.adm.Senha != '' ) this.admservice.inserirAdm(this.adm)
+    if(this.adm.nome != '' && this.adm.senha != '' ) this.admservice.inserirAdm(this.adm)
     .subscribe( ( error ) => { if ( error ) console.log( error )});
     
     else
@@ -56,16 +56,16 @@ export class AdmComponent {
   }
 
   atualizarAdm(){
-    this.adm2.ID = this.adm2.ID;
-    this.adm2.Nome = this.adm2.Nome?.trim();
-    this.adm2.Senha = this.adm2.Senha?.trim();
+    this.adm2.id = this.adm2.id;
+    this.adm2.nome = this.adm2.nome?.trim();
+    this.adm2.senha = this.adm2.senha?.trim();
 
-    if( this.adm2.Nome.length == 0 || this.adm2.Senha?.length == 0 ) {
+    if( this.adm2.nome.length == 0 || this.adm2.senha?.length == 0 ) {
       this.snackBar.open("O nome do adm ou a senha esta vazio!", "OK!");
       return;
     }
 
-    if(this.adm2 != undefined) this.admservice.atualizarAdm(this.adm2, this.adm2.ID)
+    if(this.adm2 != undefined) this.admservice.atualizarAdm(this.adm2, this.adm2.id)
     .subscribe(
       res => {
         console.log(res);

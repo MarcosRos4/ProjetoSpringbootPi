@@ -18,19 +18,19 @@ export class ProdutoComponent {
   produtos?: Produto[];
 
   produto: Produto={
-    ID:0,
-    Nome:"",
-    Preco:0,
-    Imagem:"",
-    Descricao:""
+    id:0,
+    nome:"",
+    preco:0,
+    imagem:"",
+    descricao:""
   }
 
   produto2: Produto={
-    ID:0,
-    Nome:"",
-    Preco:0,
-    Imagem:"",
-    Descricao:""
+    id:0,
+    nome:"",
+    preco:0,
+    imagem:"",
+    descricao:""
   }
 
   id?:number
@@ -39,14 +39,14 @@ export class ProdutoComponent {
 
   criarProduto(){
 
-    this.produto.ID = this.produto.ID;
-    this.produto.Nome = this.produto.Nome?.trim();
-    this.produto.Preco=this.produto.Preco;
-    this.produto.Imagem = this.produto.Imagem?.trim();
-    this.produto.Descricao = this.produto.Descricao?.trim();
+    this.produto.id = this.produto.id;
+    this.produto.nome = this.produto.nome?.trim();
+    this.produto.preco=this.produto.preco;
+    this.produto.imagem = this.produto.imagem?.trim();
+    this.produto.descricao = this.produto.descricao?.trim();
 
 
-    if(this.produto.Nome != '' && this.produto.Preco != undefined ) this.produtoservice.inserirProduto(this.produto)
+    if(this.produto.nome != '' && this.produto.preco != undefined ) this.produtoservice.inserirProduto(this.produto)
     .subscribe( ( error ) => { if ( error ) console.log( error )});
     
     else
@@ -55,18 +55,18 @@ export class ProdutoComponent {
   }
 
   atualizarProduto(){
-    this.produto2.ID = this.produto2.ID;
-    this.produto2.Nome = this.produto2.Nome?.trim();
-    this.produto2.Preco=this.produto2.Preco;
-    this.produto2.Imagem = this.produto2.Imagem?.trim();
-    this.produto2.Descricao = this.produto2.Descricao?.trim();
+    this.produto2.id = this.produto2.id;
+    this.produto2.nome = this.produto2.nome?.trim();
+    this.produto2.preco=this.produto2.preco;
+    this.produto2.imagem = this.produto2.imagem?.trim();
+    this.produto2.descricao = this.produto2.descricao?.trim();
 
-    if( this.produto2.Nome.length == 0 || this.produto2.Preco == undefined ) {
+    if( this.produto2.nome.length == 0 || this.produto2.preco == undefined ) {
       this.snackBar.open("O Nome do produto ou preço esta vazio!", "OK!");
       return;
     }
 
-    if(this.produto2 != undefined) this.produtoservice.atualizarProduto(this.produto2, this.produto2.ID)
+    if(this.produto2 != undefined) this.produtoservice.atualizarProduto(this.produto2, this.produto2.id)
     .subscribe(
       res => {
         console.log(res);
