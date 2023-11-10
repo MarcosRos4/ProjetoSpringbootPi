@@ -8,6 +8,7 @@ import { ProdutoComponent } from './components/produto/produto.component';
 import { FormsModule } from '@angular/forms';
 import { HttpClientModule } from '@angular/common/http';
 import { MatSnackBarModule } from '@angular/material/snack-bar';
+import { HeaderComponent } from './components/header/header.component';
 
 
 
@@ -15,7 +16,8 @@ import { MatSnackBarModule } from '@angular/material/snack-bar';
   declarations: [
     AppComponent,
     AdmComponent,
-    ProdutoComponent
+    ProdutoComponent,
+    HeaderComponent
   ],
   imports: [
     BrowserModule,
