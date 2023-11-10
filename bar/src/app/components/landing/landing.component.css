@@ -1,0 +1,22 @@
+@import url("src/assets/css/base.css");  
+@import url("src/assets/css/reset.css");    
+@import url("src/styles.css");
+
+.Landing {
+    height: 100vh;
+    width: 100vw;
+    background-color: #000000;
+    background-image: url("../../../assets/image/landing-img.png");
+    background-repeat: no-repeat;
+    background-size: cover;
+    /* display: flex;
+    justify-content: center; */
+    font-family: var(--font-league-spartan);
+    font-weight: 500;
+}
+
+h1 {
+    font-size: 10.0rem; /* rem = pegar tam do figma e dividir por 16 */
+    color: white;
+}
+
