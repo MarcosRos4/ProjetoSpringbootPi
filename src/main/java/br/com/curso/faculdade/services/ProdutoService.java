@@ -2,15 +2,9 @@ package br.com.curso.faculdade.services;
 
 import java.util.List;
 import java.util.Optional;
-
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
-
-import br.com.curso.faculdade.entities.Adm;
-import br.com.curso.faculdade.entities.Pessoa;
 import br.com.curso.faculdade.entities.Produto;
-import br.com.curso.faculdade.repositories.AdmRepository;
-import br.com.curso.faculdade.repositories.PessoaRepository;
 import br.com.curso.faculdade.repositories.ProdutoRepository;
 
 @Service
