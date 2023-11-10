@@ -2,6 +2,7 @@ import { NgModule } from '@angular/core';
 import { BrowserModule } from '@angular/platform-browser';
 import { MatIconModule } from '@angular/material/icon';
 import { AppRoutingModule } from './app-routing.module';
+
 import { AppComponent } from './app.component';
 import { AdmComponent } from './components/adm/adm.component';
 import { ProdutoComponent } from './components/produto/produto.component';
@@ -11,6 +12,7 @@ import { MatSnackBarModule } from '@angular/material/snack-bar';
 import { HeaderComponent } from './components/header/header.component';
 import { LoginComponent } from './components/login/login.component';
 import { BebidasComponent } from './components/bebidas/bebidas.component';
+import { LandingComponent } from './components/landing/landing.component';
 
 
 @NgModule({
@@ -18,9 +20,10 @@ import { BebidasComponent } from './components/bebidas/bebidas.component';
     AppComponent,
     AdmComponent,
     ProdutoComponent,
-    HeaderComponent
+    HeaderComponent,
     LoginComponent,
-    BebidasComponent
+    BebidasComponent,
+    LandingComponent,
   ],
   imports: [
     BrowserModule,
