@@ -18,6 +18,7 @@ import { ConsultaComponent } from './components/consulta/consulta.component';
 import { MatTableModule } from '@angular/material/table';
 import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
 import { FooterComponent } from './components/footer/footer.component';
+import { CadastroAdmComponent } from './components/cadastro-adm/cadastro-adm.component';
 
 @NgModule({
   declarations: [
@@ -30,7 +31,8 @@ import { FooterComponent } from './components/footer/footer.component';
     LandingComponent,
     CadastroComponent,
     ConsultaComponent,
-    FooterComponent
+    FooterComponent,
+    CadastroAdmComponent
   ],
   imports: [
     MatTableModule,

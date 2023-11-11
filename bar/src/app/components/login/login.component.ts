@@ -39,7 +39,6 @@ export class LoginComponent {
     )
     .subscribe((adms) => {
       this.adms= adms;
-      console.log(this.adms)
     });
   }
 
@@ -56,9 +55,7 @@ export class LoginComponent {
         this.router.navigateByUrl( '/consulta' );
       }
       else{
-        console.log("Nome ou senha incorretos")
-        console.log(this.usuario)
-        console.log(this.senha)
+        this.snackBar.open("O Nome do adm ou a senha estão incorretos ou não existem!", "OK!");
       }
       
     });
