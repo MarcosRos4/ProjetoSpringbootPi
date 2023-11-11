@@ -18,6 +18,7 @@ import { ConsultaComponent } from './components/consulta/consulta.component';
 import { MatTableModule } from '@angular/material/table';
 import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
 import { FooterComponent } from './components/footer/footer.component';
+import { CardapioHomeComponent } from './components/cardapio-home/cardapio-home.component';
 import { CadastroAdmComponent } from './components/cadastro-adm/cadastro-adm.component';
 import { MatButtonModule } from '@angular/material/button';
 
@@ -34,6 +35,7 @@ import { MatButtonModule } from '@angular/material/button';
     CadastroComponent,
     ConsultaComponent,
     FooterComponent,
+    CardapioHomeComponent,
     CadastroAdmComponent
   ],
   imports: [
