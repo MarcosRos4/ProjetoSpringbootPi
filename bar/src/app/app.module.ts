@@ -2,7 +2,6 @@ import { NgModule } from '@angular/core';
 import { BrowserModule } from '@angular/platform-browser';
 import { MatIconModule } from '@angular/material/icon';
 import { AppRoutingModule } from './app-routing.module';
-
 import { AppComponent } from './app.component';
 import { AdmComponent } from './components/adm/adm.component';
 import { ProdutoComponent } from './components/produto/produto.component';
@@ -13,8 +12,12 @@ import { HeaderComponent } from './components/header/header.component';
 import { LoginComponent } from './components/login/login.component';
 import { BebidasComponent } from './components/bebidas/bebidas.component';
 import { LandingComponent } from './components/landing/landing.component';
+import { CadastroComponent } from './components/cadastro/cadastro.component';
+import { RouterOutlet } from '@angular/router';
+import { ConsultaComponent } from './components/consulta/consulta.component';
+import { MatTableModule } from '@angular/material/table';
+import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
 import { FooterComponent } from './components/footer/footer.component';
-
 
 @NgModule({
   declarations: [
@@ -25,15 +28,20 @@ import { FooterComponent } from './components/footer/footer.component';
     LoginComponent,
     BebidasComponent,
     LandingComponent,
-    FooterComponent,
+    CadastroComponent,
+    ConsultaComponent,
+    FooterComponent
   ],
   imports: [
+    MatTableModule,
+    RouterOutlet,
     BrowserModule,
     AppRoutingModule,
     FormsModule,
     HttpClientModule,
     MatSnackBarModule,
-    MatIconModule
+    MatIconModule,
+    BrowserAnimationsModule
   ],
   providers: [],
   bootstrap: [AppComponent]

@@ -15,7 +15,7 @@
     /* background-color: #131313; */
 
 
-    height: 76px;
+    height: 100px;
     width: 100vw;
 }
 
@@ -27,11 +27,7 @@
 }
 
 .logo__contain{
-    padding: 0px;
-    margin-left: 30px;
-    margin-right: 41px;
-    margin-top: 35px;
-
+    left: 25px;
     position: absolute;
 }
 
@@ -66,7 +62,7 @@
     /* color: #E4E4E4; */
     font-family: var(--font-league-spartan);
     font-size: 1.2rem;
-
+    font-weight: 700;
     text-decoration: none;
     text-transform: uppercase;
 
