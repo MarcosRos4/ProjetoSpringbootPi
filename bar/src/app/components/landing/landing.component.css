@@ -3,12 +3,13 @@
 @import url("src/styles.css");
 
 .Landing {
+
     display: flex;
     flex-direction: column;
     justify-content: center;
     align-items: center;
 
-    height: calc(100vh - 76px);
+    height: calc(100vh - 100px);
     width: 100vw;
     background-color: #000000;
     background-image: url("../../../assets/image/landing-img.png");
@@ -16,6 +17,11 @@
     background-size: cover;
     font-family: var(--font-league-spartan);
     
+}
+
+::-webkit-scrollbar{
+   background-color: #FFC700;
+   width: 5px;     
 }
 
 .logo-meio {
@@ -44,6 +50,7 @@
 }
 
 .slogan {
+
     display: flex;
     flex-direction: column;
     justify-content: center;
@@ -59,9 +66,7 @@
 }
 
 .slogan2 {
-
     margin-left: 33px;
-
 }
 
 
