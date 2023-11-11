@@ -33,12 +33,13 @@ import { MatButtonModule } from '@angular/material/button';
     BebidasComponent,
     LandingComponent,
     CadastroComponent,
-    ConsultaComponent,
     FooterComponent,
     CardapioHomeComponent,
     CadastroAdmComponent
   ],
   imports: [
+    
+    ConsultaComponent,
     MatButtonModule,
     ConsultaComponent,
     MatTableModule,
