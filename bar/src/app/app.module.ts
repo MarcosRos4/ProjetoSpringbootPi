@@ -13,7 +13,11 @@ import { HeaderComponent } from './components/header/header.component';
 import { LoginComponent } from './components/login/login.component';
 import { BebidasComponent } from './components/bebidas/bebidas.component';
 import { LandingComponent } from './components/landing/landing.component';
-
+import { CadastroComponent } from './components/cadastro/cadastro.component';
+import { RouterOutlet } from '@angular/router';
+import { ConsultaComponent } from './components/consulta/consulta.component';
+import {MatTableModule} from '@angular/material/table';
+import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
 
 @NgModule({
   declarations: [
@@ -24,14 +28,19 @@ import { LandingComponent } from './components/landing/landing.component';
     LoginComponent,
     BebidasComponent,
     LandingComponent,
+    CadastroComponent,
+    ConsultaComponent,
   ],
   imports: [
+    MatTableModule,
+    RouterOutlet,
     BrowserModule,
     AppRoutingModule,
     FormsModule,
     HttpClientModule,
     MatSnackBarModule,
-    MatIconModule
+    MatIconModule,
+    BrowserAnimationsModule
   ],
   providers: [],
   bootstrap: [AppComponent]
