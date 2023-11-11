@@ -19,6 +19,8 @@ import { MatTableModule } from '@angular/material/table';
 import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
 import { FooterComponent } from './components/footer/footer.component';
 import { CadastroAdmComponent } from './components/cadastro-adm/cadastro-adm.component';
+import { MatButtonModule } from '@angular/material/button';
+
 
 @NgModule({
   declarations: [
@@ -35,6 +37,8 @@ import { CadastroAdmComponent } from './components/cadastro-adm/cadastro-adm.com
     CadastroAdmComponent
   ],
   imports: [
+    MatButtonModule,
+    ConsultaComponent,
     MatTableModule,
     RouterOutlet,
     BrowserModule,
