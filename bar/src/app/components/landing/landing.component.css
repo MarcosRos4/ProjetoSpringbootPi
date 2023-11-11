@@ -23,8 +23,7 @@
     flex-direction: row;
     justify-content: space-between;
     align-items: flex-end;
-    /* width: 25%; */
-    /* height: 20%; */
+    
     gap: 10px;
     margin-top: 88px;
 }
@@ -34,12 +33,14 @@
     font-size: 160px; /* rem = pegar tam do figma e dividir por 16 */
     color: #FFFFFF;
     font-weight: 600; 
+    margin-bottom: 92px;
+    width: 50%;
 }
 
 .logo-meio-logo {
     height: 189.5px;
     width: 166.9px;
-    margin-bottom: 30px;
+    margin-bottom: 44px;
 }
 
 .slogan {
