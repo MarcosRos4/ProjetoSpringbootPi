@@ -1,0 +1,26 @@
+.Consulta{
+    background-color: #131313;
+    height: 100vh;
+    width: 100vw;
+    color: aliceblue;
+}
+
+.tabela-div > table{
+    background-color: #131313;
+    
+}
+
+td{
+    color: aliceblue;
+}
+th{
+    color: aliceblue;
+}
+
+
+
+
+
+mat-icon{
+    color: aliceblue;
+}

@@ -1,10 +1,11 @@
 <div class="Login">
     <div class="centro">
         <img src="../../../assets/image/urso branco.png" alt="urso branco">
-        <form>
-            <input type="text" placeholder="Login">
-            <input type="password" name="senha" id="senha" placeholder="Senha">
-            <input type="submit">
+        <form #loginForm="ngForm">
+            <input  placeholder="Login" name="usuario" id="usuario" [(ngModel)]="usuario">
+            <input type="password" name="senha" id="senha" placeholder="Senha" [(ngModel)]="senha">
+            <input type="submit" (click)="verificarAdm()">
+            <input type="submit" routerLink="/cadastroAdm" value="Cadastrar">
         </form>
     </div>
 </div>
