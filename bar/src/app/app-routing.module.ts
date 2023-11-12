@@ -4,7 +4,6 @@ import { CadastroComponent } from './components/cadastro/cadastro.component';
 import { LandingComponent } from './components/landing/landing.component';
 import { ConsultaComponent } from './components/consulta/consulta.component';
 import { LoginComponent } from './components/login/login.component';
-import { AdmComponent } from './components/adm/adm.component';
 import { CadastroAdmComponent } from './components/cadastro-adm/cadastro-adm.component';
 import { EditarProdutoComponent } from './components/editar-produto/editar-produto.component';
 import { CardapioComponent } from './components/cardapio/cardapio.component';
@@ -25,10 +24,6 @@ const routes: Routes = [
   {
     path:"login",
     component: LoginComponent
-  },
-  {
-    path:"adm",
-    component: AdmComponent
   },
   {
     path:"cadastroAdm",

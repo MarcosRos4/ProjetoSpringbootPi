@@ -71,7 +71,7 @@
     align-items: center;
 }
 
-.botoes > input {
+button {
     margin: 8px;
     width: 185px;
     height: 52px;
@@ -84,4 +84,6 @@
     font-weight: 700;
     line-height: 20px;
 }
+
+
 

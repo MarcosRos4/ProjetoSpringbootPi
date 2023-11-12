@@ -1,0 +1,69 @@
+.footer{
+    background-color: black;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    color: aliceblue;
+    font-family: 'League Spartan', sans-serif;
+    padding-top: 30px;
+    padding-bottom: 30px;
+    font-size: 0.8em;
+}
+
+
+.info{
+    display: flex;
+    border-bottom: aliceblue 1px solid;
+}
+
+.urso{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 15px;
+    margin: 30px;
+}
+.urso >  img{
+    height: 80px;
+    margin-bottom: 20px;
+}
+.urso > h1{
+
+    font-size: 5em;
+    font-weight: 700;
+}
+
+.horario{
+    font-size: 1.5em;
+    margin: 30px;
+}
+
+.horario > h1{
+    padding-left: 10px;
+    font-size:  1.2em;
+    border-left: #FFC700 4px solid;
+    margin-bottom: 25px;
+}
+
+.contato{
+    font-size: 1.5em;
+    margin: 30px; 
+}
+
+.contato > h1{
+    padding-left: 10px;
+    font-size:  1.2em;
+    border-left: #FFC700 4px solid;
+    margin-bottom: 25px; 
+}
+
+.copy{
+    padding-top: 15px;
+}
+
+.copy > h1{
+    display: flex;
+    align-items: center;
+    font-size: 1em;
+}
