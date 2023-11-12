@@ -22,6 +22,7 @@ import { CardapioHomeComponent } from './components/cardapio-home/cardapio-home.
 import { CadastroAdmComponent } from './components/cadastro-adm/cadastro-adm.component';
 import { MatButtonModule } from '@angular/material/button';
 import { EditarProdutoComponent } from './components/editar-produto/editar-produto.component';
+import { CardapioComponent } from './components/cardapio/cardapio.component';
 
 
 @NgModule({
@@ -37,7 +38,8 @@ import { EditarProdutoComponent } from './components/editar-produto/editar-produ
     FooterComponent,
     CardapioHomeComponent,
     CadastroAdmComponent,
-    EditarProdutoComponent
+    EditarProdutoComponent,
+    CardapioComponent
     
   ],
   imports: [
