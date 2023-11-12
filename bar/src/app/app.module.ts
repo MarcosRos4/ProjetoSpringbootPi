@@ -4,7 +4,7 @@ import { MatIconModule } from '@angular/material/icon';
 import { AppRoutingModule } from './app-routing.module';
 import { AppComponent } from './app.component';
 import { AdmComponent } from './components/adm/adm.component';
-import { ProdutoComponent } from './components/produto/produto.component';
+
 import { FormsModule } from '@angular/forms';
 import { HttpClientModule } from '@angular/common/http';
 import { MatSnackBarModule } from '@angular/material/snack-bar';
@@ -22,14 +22,13 @@ import { CardapioHomeComponent } from './components/cardapio-home/cardapio-home.
 import { CadastroAdmComponent } from './components/cadastro-adm/cadastro-adm.component';
 import { MatButtonModule } from '@angular/material/button';
 import { EditarProdutoComponent } from './components/editar-produto/editar-produto.component';
-import { CardapioComponent } from './components/cardapio/cardapio.component';
+
 
 
 @NgModule({
   declarations: [
     AppComponent,
     AdmComponent,
-    ProdutoComponent,
     HeaderComponent,
     LoginComponent,
     BebidasComponent,
@@ -38,8 +37,7 @@ import { CardapioComponent } from './components/cardapio/cardapio.component';
     FooterComponent,
     CardapioHomeComponent,
     CadastroAdmComponent,
-    EditarProdutoComponent,
-    CardapioComponent
+    EditarProdutoComponent
     
   ],
   imports: [
