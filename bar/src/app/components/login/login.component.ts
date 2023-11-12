@@ -29,6 +29,11 @@ export class LoginComponent {
     this.buscarAdms()
   }
 
+  ngAfterViewInit() {
+  
+    this.buscarAdms();
+  }
+
 
   buscarAdms( ) : void {
     this.admservice.buscarAdms()
@@ -45,23 +50,21 @@ export class LoginComponent {
 
   verificarAdm():void{
 
+    this.buscarAdms()
+
     this.usuario.trim()
     this.senha.trim()
 
     const usuarioExistente = this.adms?.find(
-      (element) => element.nome === this.usuario && element.senha === this.senha || element.nome === this.usuario
+      (element) => element.nome === this.usuario && element.senha === this.senha
     );
-
-
-    
 
       if(usuarioExistente){
         this.router.navigateByUrl( '/consulta' );
       }
       else{
         this.snackBar.open("O Nome do adm ou a senha estão incorretos ou não existem!", "OK!");
-      }
-      
+      }   
   }
 
 }

@@ -106,14 +106,12 @@ export class ConsultaComponent implements AfterViewInit {
   pesquisar(): void {
 
     
-    // Se o termo de pesquisa estiver vazio, recarregue todos os produtos
     if (this.termoPesquisa.trim() === '') {
-      this.dataSource.filter = ''; // Remova o filtro
+      this.dataSource.filter = ''; 
       this.buscarProdutos();
       return;
     }
 
-    // Caso contrário, filtre os produtos com base no termo de pesquisa
     this.dataSource.filter = this.termoPesquisa.trim().toLowerCase();
   }
   
