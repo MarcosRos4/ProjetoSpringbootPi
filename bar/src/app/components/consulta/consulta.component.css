@@ -3,11 +3,54 @@
     height: 100vh;
     width: 100vw;
     color: aliceblue;
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-start;
+    align-items: center;
+    gap: 20px;
+}
+
+.pesquisa{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 100%;
+}
+
+.pesquisa > input{
+    font: 700 2em 'League Spartan', sans serif;
+    width: 30%;
+    height: 55px;
+    text-align: center;
+    background-color: #D9D9D9;
+    border-radius: 5px;
+}
+
+.pesquisa > button > mat-icon {
+    font-size: 2em;
+    width: fit-content;
+    height: fit-content;
+}
+
+.pesquisa > button {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: fit-content;
+    height: fit-content;
+}
+
+.tabela-div{
+    display: flex;
+    flex-direction: column;
+    width: 60%;
+    height: 60%;
+    overflow-y: scroll;
 }
 
 .tabela-div > table{
     background-color: #131313;
-    
+    height: 100%;
 }
 
 td{
@@ -16,11 +59,29 @@ td{
 th{
     color: aliceblue;
 }
-
-
-
-
-
 mat-icon{
     color: aliceblue;
+}
+
+.tabela-div > mat-paginator{
+    position:  -webkit-sticky;
+}
+
+.botao-div{
+    display: flex;
+    justify-content: flex-end;
+    width: 60%;
+}
+
+.botao-div > button{
+    height: fit-content;
+    width: fit-content;
+    background-color: #D9D9D9;
+}
+
+.add-icon{
+    color: #131313;
+    font-size: 11em;
+    width: fit-content;
+    height: fit-content;
 }
