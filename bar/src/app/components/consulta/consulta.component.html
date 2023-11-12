@@ -1,11 +1,10 @@
 <div class="Consulta">
 
     <div class="pesquisa">
-        <input placeholder="Procurar Produtos" type="text" name="barrapesquisa" id="barraPesquisa">
-        <button mat-icon-button>
+        <input placeholder="Procurar Produtos" type="text" name="barrapesquisa" id="barraPesquisa" [(ngModel)]="termoPesquisa" >
+        <button mat-icon-button (click)="pesquisar()">
           <mat-icon>search</mat-icon>
         </button>
-        
     </div>
     <div class="tabela-div">
       <table mat-table [dataSource]="dataSource" matSort (matSortChange)="announceSortChange($event)"

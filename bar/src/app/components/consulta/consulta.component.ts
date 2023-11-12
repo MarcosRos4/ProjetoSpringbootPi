@@ -10,6 +10,7 @@ import { ProdutoService } from 'src/app/services/produto/produto.service';
 import { Produto } from 'src/app/model/produto';
 import { catchError, of } from 'rxjs';
 import { MatSnackBar } from '@angular/material/snack-bar';
+import { FormsModule } from '@angular/forms';
 
 
 
@@ -20,6 +21,7 @@ import { MatSnackBar } from '@angular/material/snack-bar';
   styleUrls: ['./consulta.component.css'],
   standalone: true,
   imports: [
+    FormsModule,
     MatTableModule, MatIconModule,
     MatPaginatorModule, MatButtonModule,
     MatSortModule
@@ -29,6 +31,8 @@ import { MatSnackBar } from '@angular/material/snack-bar';
 export class ConsultaComponent implements AfterViewInit {
   displayedColumns: string[] = ['id', 'nome', 'preco', 'descricao', 'editar'];
   dataSource = new MatTableDataSource<Produto>();
+  termoPesquisa: string = '';
+
 
   constructor(
     private _liveAnnouncer: LiveAnnouncer,
@@ -97,6 +101,20 @@ export class ConsultaComponent implements AfterViewInit {
   editarProduto(id:number): void {
 
     this.router.navigateByUrl(`/editProduto/${id}`);
+  }
+
+  pesquisar(): void {
+
+    
+    // Se o termo de pesquisa estiver vazio, recarregue todos os produtos
+    if (this.termoPesquisa.trim() === '') {
+      this.dataSource.filter = ''; // Remova o filtro
+      this.buscarProdutos();
+      return;
+    }
+
+    // Caso contrário, filtre os produtos com base no termo de pesquisa
+    this.dataSource.filter = this.termoPesquisa.trim().toLowerCase();
   }
   
 
