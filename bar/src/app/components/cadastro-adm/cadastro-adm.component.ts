@@ -37,11 +37,11 @@ export class CadastroAdmComponent {
     this.adm.senha = this.adm.senha?.trim();
   
     const usuarioExistente = this.adms?.find(
-      (element) => element.nome === this.adm.nome && element.senha === this.adm.senha
+      (element) => element.nome === this.adm.nome && element.senha === this.adm.senha || element.nome === this.adm.nome
     );
   
     if (usuarioExistente) {
-      this.snackBar.open("Nome e senha já pertencem a outro usuário", "OK!");
+      this.snackBar.open("Este usuario já existe", "OK!");
 
     } else {
       if (this.adm.nome !== "" && this.adm.senha !== "") {
