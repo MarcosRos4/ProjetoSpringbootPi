@@ -1,55 +1,16 @@
 import { Component, ViewChild, AfterViewInit } from '@angular/core';
-import {MatPaginator, MatPaginatorModule} from '@angular/material/paginator';
+import { MatPaginator, MatPaginatorModule } from '@angular/material/paginator';
 import { MatIconModule } from '@angular/material/icon';
 import { MatTableModule, MatTableDataSource } from '@angular/material/table';
 import { MatButtonModule } from '@angular/material/button';
 import { MatSort, Sort, MatSortModule } from '@angular/material/sort';
 import { LiveAnnouncer } from '@angular/cdk/a11y';
-import { Router } from '@angular/router'
+import { Router } from '@angular/router';
+import { ProdutoService } from 'src/app/services/produto/produto.service';
+import { Produto } from 'src/app/model/produto';
+import { catchError, of } from 'rxjs';
+import { MatSnackBar } from '@angular/material/snack-bar';
 
-
-export interface Produto {
-  nome: string;
-  preco: number;
-  tipo: string;
-  position: number;
-}
-
-const ELEMENT_DATA: Produto[] = [
-  {position: 1, nome: 'Hydrogen', preco: 1.0079, tipo: 'H'},
-  {position: 2, nome: 'Helium', preco: 4.0026, tipo: 'He'},
-  {position: 3, nome: 'Lithium', preco: 6.941, tipo: 'Li'},
-  {position: 4, nome: 'Beryllium', preco: 9.0122, tipo: 'Be'},
-  {position: 5, nome: 'Boron', preco: 10.811, tipo: 'B'},
-  {position: 6, nome: 'Carbon', preco: 12.0107, tipo: 'C'},
-  {position: 7, nome: 'Nitrogen', preco: 14.0067, tipo: 'N'},
-  {position: 8, nome: 'Oxygen', preco: 15.9994, tipo: 'O'},
-  {position: 9, nome: 'Fluorine', preco: 18.9984, tipo: 'F'},
-  {position: 10, nome: 'Neon', preco: 20.1797, tipo: 'Ne'},
-  {position: 10, nome: 'Neon', preco: 20.1797, tipo: 'Ne'},
-  {position: 10, nome: 'Neon', preco: 20.1797, tipo: 'Ne'},
-  {position: 10, nome: 'Neon', preco: 20.1797, tipo: 'Ne'},
-  {position: 10, nome: 'Neon', preco: 20.1797, tipo: 'Ne'},
-  {position: 10, nome: 'Neon', preco: 20.1797, tipo: 'Ne'},
-  {position: 10, nome: 'Neon', preco: 20.1797, tipo: 'Ne'},
-  {position: 10, nome: 'Neon', preco: 20.1797, tipo: 'Ne'},
-  {position: 10, nome: 'Neon', preco: 20.1797, tipo: 'Ne'},
-  {position: 10, nome: 'Neon', preco: 20.1797, tipo: 'Ne'},
-  {position: 10, nome: 'Neon', preco: 20.1797, tipo: 'Ne'},
-  {position: 10, nome: 'Neon', preco: 20.1797, tipo: 'Ne'},
-  {position: 10, nome: 'Neon', preco: 20.1797, tipo: 'Ne'},
-  {position: 10, nome: 'Neon', preco: 20.1797, tipo: 'Ne'},
-  {position: 10, nome: 'Neon', preco: 20.1797, tipo: 'Ne'},
-  {position: 10, nome: 'Neon', preco: 20.1797, tipo: 'Ne'},
-  {position: 10, nome: 'Neon', preco: 20.1797, tipo: 'Ne'},
-  {position: 10, nome: 'Neon', preco: 20.1797, tipo: 'Ne'},
-  {position: 10, nome: 'Neon', preco: 20.1797, tipo: 'Ne'},
-  {position: 10, nome: 'Neon', preco: 20.1797, tipo: 'Ne'},
-  {position: 10, nome: 'Neon', preco: 20.1797, tipo: 'Ne'},
-  {position: 10, nome: 'Neon', preco: 20.1797, tipo: 'Ne'},
-  {position: 10, nome: 'Neon', preco: 20.1797, tipo: 'Ne'},
-  {position: 10, nome: 'Neon', preco: 20.1797, tipo: 'Ne'},
-];
 
 
 
@@ -65,25 +26,43 @@ const ELEMENT_DATA: Produto[] = [
   ],
 })
 
+export class ConsultaComponent implements AfterViewInit {
+  displayedColumns: string[] = ['id', 'nome', 'preco', 'descricao', 'editar'];
+  dataSource = new MatTableDataSource<Produto>();
 
-export class ConsultaComponent implements AfterViewInit{
-  displayedColumns: string[] = ['position', 'nome', 'preco', 'tipo', 'editar'];
-  dataSource = new MatTableDataSource<Produto>(ELEMENT_DATA);
-  
-  constructor(private _liveAnnouncer: LiveAnnouncer,    private router : Router    ) {}
-  
+  constructor(
+    private _liveAnnouncer: LiveAnnouncer,
+    private router: Router,
+    private produtoService: ProdutoService,
+    private snackBar : MatSnackBar,
+
+  ) {}
+
   @ViewChild(MatSort)
   sort!: MatSort;
 
   @ViewChild(MatPaginator)
-  paginator!: MatPaginator; 
-  
+  paginator!: MatPaginator;
+
   ngAfterViewInit() {
-    this.dataSource.sort = this.sort
-    this.dataSource.paginator = this.paginator
+    this.dataSource.sort = this.sort;
+    this.dataSource.paginator = this.paginator;
+
+    this.buscarProdutos();
   }
 
-  announceSortChange(sortState: Sort){
+  buscarProdutos(): void {
+    this.produtoService.buscarProduto().subscribe(
+      (produtos) => {
+        this.dataSource.data = produtos;
+      },
+      (error) => {
+        console.error('Erro ao buscar produtos:', error);
+      }
+    );
+  }
+
+  announceSortChange(sortState: Sort) {
     if (sortState.direction) {
       this._liveAnnouncer.announce(`Sorted ${sortState.direction}ending`);
     } else {
@@ -91,10 +70,34 @@ export class ConsultaComponent implements AfterViewInit{
     }
   }
 
-  cadastro(){
-    this.router.navigateByUrl( '/cadastro' );
+  cadastro() {
+    this.router.navigateByUrl('/cadastro');
   }
 
+  removerProduto(id:number){
+
+    if(id==undefined){
+      this.snackBar.open("O ID está vazio!", "OK!");
+      return;
+    }
+
+    if(id != undefined) this.produtoService.removerProduto(id)
+    .subscribe({
+      next: (res) => {
+        this.buscarProdutos()
+        if( res ) console.log(res);
+
+      },
+      error: (erro) => {
+        console.log(erro);
+      }
+    })
+  }
+
+  editarProduto(id:number): void {
+
+    this.router.navigateByUrl(`/editProduto/${id}`);
+  }
+  
+
 }
-
-
