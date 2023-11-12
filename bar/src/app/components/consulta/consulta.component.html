@@ -1,7 +1,7 @@
 <div class="Consulta">
 
     <div class="pesquisa">
-        <input placeholder="Procurar Produtos" type="text" name="barrapesquisa" id="barraPesquisa" [(ngModel)]="termoPesquisa" >
+        <input placeholder="Procurar Produtos" type="text" name="barrapesquisa" id="barraPesquisa" [(ngModel)]="termoPesquisa" (ngModelChange)="pesquisar()">
         <button mat-icon-button (click)="pesquisar()">
           <mat-icon>search</mat-icon>
         </button>

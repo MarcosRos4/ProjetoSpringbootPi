@@ -16,9 +16,9 @@ import { FormsModule } from '@angular/forms';
 
 
 @Component({
-  selector: 'app-consulta',
-  templateUrl: './consulta.component.html',
-  styleUrls: ['./consulta.component.css'],
+  selector: 'app-cardapio',
+  templateUrl: './cardapio.component.html',
+  styleUrls: ['./cardapio.component.css'],
   standalone: true,
   imports: [
     FormsModule,
@@ -28,8 +28,8 @@ import { FormsModule } from '@angular/forms';
   ],
 })
 
-export class ConsultaComponent implements AfterViewInit {
-  displayedColumns: string[] = ['id', 'nome', 'preco', 'descricao', 'editar'];
+export class CardapioComponent implements AfterViewInit {
+  displayedColumns: string[] = ['nome', 'preco', 'descricao'];
   dataSource = new MatTableDataSource<Produto>();
   termoPesquisa: string = '';
 

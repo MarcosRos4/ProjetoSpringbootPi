@@ -38,16 +38,13 @@ import { CardapioComponent } from './components/cardapio/cardapio.component';
     FooterComponent,
     CardapioHomeComponent,
     CadastroAdmComponent,
-    EditarProdutoComponent,
-    CardapioComponent
-    
+    EditarProdutoComponent,    
   ],
   imports: [
     
-  ConsultaComponent,
-    
-    MatButtonModule,
     ConsultaComponent,
+    CardapioComponent,
+    MatButtonModule,
     MatTableModule,
     RouterOutlet,
     BrowserModule,

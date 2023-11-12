@@ -7,6 +7,7 @@ import { LoginComponent } from './components/login/login.component';
 import { AdmComponent } from './components/adm/adm.component';
 import { CadastroAdmComponent } from './components/cadastro-adm/cadastro-adm.component';
 import { EditarProdutoComponent } from './components/editar-produto/editar-produto.component';
+import { CardapioComponent } from './components/cardapio/cardapio.component';
 
 const routes: Routes = [
   {
@@ -36,6 +37,10 @@ const routes: Routes = [
   {
     path:"editProduto/:id",
     component: EditarProdutoComponent
+  },
+  {
+    path:"cardapio",
+    component: CardapioComponent
   }
 
 

@@ -29,7 +29,15 @@
 .logo__contain{
     left: 25px;
     position: absolute;
+    
+
 }
+
+.logo__contain:hover{
+    cursor: pointer;
+}
+
+
 
 
 /* nav: ========================================= */
