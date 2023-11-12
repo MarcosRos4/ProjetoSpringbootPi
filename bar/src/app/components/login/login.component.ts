@@ -48,19 +48,20 @@ export class LoginComponent {
     this.usuario.trim()
     this.senha.trim()
 
+    const usuarioExistente = this.adms?.find(
+      (element) => element.nome === this.usuario && element.senha === this.senha || element.nome === this.usuario
+    );
 
-    this.adms?.forEach(element => {
 
-      if(this.usuario==element.nome && this.senha==element.senha){
+    
+
+      if(usuarioExistente){
         this.router.navigateByUrl( '/consulta' );
       }
       else{
         this.snackBar.open("O Nome do adm ou a senha estão incorretos ou não existem!", "OK!");
       }
       
-    });
-
-
   }
 
 }

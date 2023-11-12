@@ -5,10 +5,11 @@
     </div>
     <form action="">
         <div class="inputs">
-            <input type="text" name="nomeprod" id="nomeprod" placeholder="Nome do produto: ">
-            <input type="text" name="precoprod" id="precoprod" placeholder="Preço: ">
-            <input type="text" placeholder="Tipo: ">
+            <input type="text" name="nomeprod" id="nomeprod" placeholder="Nome do produto: " [(ngModel)]="produto.nome">
+            <input type="text" name="precoprod" id="precoprod" placeholder="Preço: " [(ngModel)]="produto.preco">
+            <input type="text" name="descprod" id="descprod" placeholder="Descrição: " [(ngModel)]="produto.descricao">
         </div>
-        <input type="submit" value="Registrar">
+        <input type="submit" value="Registrar" (click)="criarProduto()">
+        <input type="submit" value="Editar" routerLink="/consulta">
     </form>
 </div>

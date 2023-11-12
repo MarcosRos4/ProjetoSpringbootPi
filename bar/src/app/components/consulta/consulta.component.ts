@@ -5,6 +5,8 @@ import { MatTableModule, MatTableDataSource } from '@angular/material/table';
 import { MatButtonModule } from '@angular/material/button';
 import { MatSort, Sort, MatSortModule } from '@angular/material/sort';
 import { LiveAnnouncer } from '@angular/cdk/a11y';
+import { Router } from '@angular/router'
+
 
 export interface Produto {
   nome: string;
@@ -68,7 +70,7 @@ export class ConsultaComponent implements AfterViewInit{
   displayedColumns: string[] = ['position', 'nome', 'preco', 'tipo', 'editar'];
   dataSource = new MatTableDataSource<Produto>(ELEMENT_DATA);
   
-  constructor(private _liveAnnouncer: LiveAnnouncer) {}
+  constructor(private _liveAnnouncer: LiveAnnouncer,    private router : Router    ) {}
   
   @ViewChild(MatSort)
   sort!: MatSort;
@@ -87,6 +89,10 @@ export class ConsultaComponent implements AfterViewInit{
     } else {
       this._liveAnnouncer.announce('Sorting cleared');
     }
+  }
+
+  cadastro(){
+    this.router.navigateByUrl( '/cadastro' );
   }
 
 }
