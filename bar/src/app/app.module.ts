@@ -21,6 +21,7 @@ import { FooterComponent } from './components/footer/footer.component';
 import { CardapioHomeComponent } from './components/cardapio-home/cardapio-home.component';
 import { CadastroAdmComponent } from './components/cadastro-adm/cadastro-adm.component';
 import { MatButtonModule } from '@angular/material/button';
+import { CardapioComponent } from './src/app/components/cardapio/cardapio.component';
 
 
 @NgModule({
@@ -35,7 +36,8 @@ import { MatButtonModule } from '@angular/material/button';
     CadastroComponent,
     FooterComponent,
     CardapioHomeComponent,
-    CadastroAdmComponent
+    CadastroAdmComponent,
+    CardapioComponent
   ],
   imports: [
     
