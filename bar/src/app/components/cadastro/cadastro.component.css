@@ -45,8 +45,15 @@ input{
     border-radius: 5px;
 }
 
-.Cadastro > form > input{
-    width: 150px;
+.wrapper{
+    display: flex;
+    gap: 20px;
+}
+
+.wrapper > input{
+    padding-right: 20px;
+    padding-left: 20px;
+    width: fit-content;
     background-color: black;
     color: aliceblue;
 }

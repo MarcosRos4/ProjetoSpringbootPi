@@ -42,7 +42,8 @@ import { EditarProdutoComponent } from './components/editar-produto/editar-produ
   ],
   imports: [
     
-    ConsultaComponent,
+  ConsultaComponent,
+    
     MatButtonModule,
     ConsultaComponent,
     MatTableModule,

@@ -9,7 +9,10 @@
             <input type="text" name="precoprod" id="precoprod" placeholder="Preço: " [(ngModel)]="produto.preco">
             <input type="text" name="descprod" id="descprod" placeholder="Descrição: " [(ngModel)]="produto.descricao">
         </div>
-        <input type="submit" value="Editar" (click)="atualizarProduto()">
-        <input type="submit" value="Consulta" routerLink="/consulta">
+        <div class="wrapper"> 
+        <input type="submit" value="Salvar" (click)="atualizarProduto()">
+        <input type="submit" value="Voltar à Consulta" routerLink="/consulta">
+        </div>
+        
     </form>
 </div>

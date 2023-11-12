@@ -1,7 +1,7 @@
 /* @import url("src/styles.css"); */
 
 .Login{
-    height: 100vh;
+    height: 89.3vh;
     width: 100vw;
     background-color: #131313;
     display: flex;
@@ -12,20 +12,20 @@
     width: 40vw;
     display: flex;
     flex-direction: column;
-    justify-content: center;
+    justify-content: flex-start;
     align-items: center;
-    
+    padding-top: 60px;
     gap: 50px;
 }
 
 .centro > form{
     display: flex;
     flex-direction: column;
-    height: 22%;
-    justify-content: space-between;
+    height: 37%;
+    justify-content: space-evenly;
 }
 
-.centro > form > input{
+input{
     height: 55px;
     text-align: justify;
     padding-left: 20px;
@@ -34,7 +34,28 @@
     font-weight: 700;
     font-size: 2em;
     outline: none;
-    
+    background-color: whitesmoke;
+}
+
+.wrapper{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    border-radius: 20px;
+    background-color: whitesmoke;
+    z-index: 0;
+}
+
+.wrapper > input{
+    width: 100%;
+    border: none;
+}
+
+.wrapper > mat-icon{
+    pointer-events: none;
+    position: relative;
+    right: 20px;
+    z-index: 1;
 }
 
 ::placeholder{

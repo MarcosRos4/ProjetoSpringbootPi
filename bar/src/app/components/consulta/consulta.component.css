@@ -1,6 +1,6 @@
 .Consulta{
     background-color: #131313;
-    height: 84.5vh;
+    height: 89.3vh;
     width: 100vw;
     color: aliceblue;
     display: flex;
@@ -8,10 +8,11 @@
     justify-content: flex-start;
     align-items: center;
     gap: 20px;
-    padding-top: 100px;
+    
 }
 
 .pesquisa{
+    padding-top: 70px;
     display: flex;
     justify-content: center;
     align-items: center;
@@ -73,8 +74,10 @@ mat-icon{
 
 .tabela-div > mat-paginator{
     position:  fixed;
-    bottom: 20%;
+    max-height: 56px;
+    bottom: 10%;
     right: 40%;
+    width: 40%;
 }
 
 .botao-div{
@@ -86,12 +89,18 @@ mat-icon{
 .botao-div > button{
     height: fit-content;
     width: fit-content;
-    background-color: #D9D9D9;
+    background-color: white;
+    font-size: 2em;
+    font-family: 'League Spartan', sans-serif;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    border-radius: 5px;
 }
 
 .add-icon{
     color: #131313;
-    font-size: 11em;
+    font-size: 2em;
     width: fit-content;
     height: fit-content;
 }
