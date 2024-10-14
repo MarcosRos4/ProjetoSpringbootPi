@@ -1,0 +1,18 @@
+<div class="Cadastro">
+    <div class="header">
+        <h1>Editor de Produtos</h1>
+        <img src="../../../assets/image/urso preto.png">
+    </div>
+    <form action="">
+        <div class="inputs">
+            <input type="text" name="nomeprod" id="nomeprod" placeholder="Nome do produto: " [(ngModel)]="produto.nome">
+            <input type="text" name="precoprod" id="precoprod" placeholder="Preço: " [(ngModel)]="produto.preco">
+            <input type="text" name="descprod" id="descprod" placeholder="Descrição: " [(ngModel)]="produto.descricao">
+        </div>
+        <div class="wrapper"> 
+        <input type="submit" value="Salvar" (click)="atualizarProduto()">
+        <input type="submit" value="Voltar à Consulta" routerLink="/consulta">
+        </div>
+        
+    </form>
+</div>

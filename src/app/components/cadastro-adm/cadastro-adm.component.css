@@ -1,0 +1,62 @@
+/* @import url("src/styles.css"); */
+
+.Login{
+    height: 89.3vh;
+    width: 100vw;
+    background-color: #131313;
+    display: flex;
+    justify-content: center;
+}
+.centro{
+    height: 100vh;
+    width: 40vw;
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-start;
+    align-items: center;
+    padding-top: 60px;
+    gap: 50px;
+}
+
+.centro > form{
+    display: flex;
+    flex-direction: column;
+    height: 37%;
+    justify-content: space-evenly;
+}
+
+input{
+    height: 55px;
+    text-align: justify;
+    padding-left: 20px;
+    border-radius: 20px;
+    font-family: 'League Spartan', sans-serif;
+    font-weight: 700;
+    font-size: 2em;
+    outline: none;
+}
+
+.wrapper{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    border-radius: 20px;
+    background-color: whitesmoke;
+    z-index: 0;
+}
+
+.wrapper > input{
+    width: 100%;
+    border: none;
+}
+
+.wrapper > mat-icon{
+    pointer-events: none;
+    position: relative;
+    right: 20px;
+    z-index: 1;
+}
+
+::placeholder{
+    color: rgba(0, 0, 0, 0.300);
+}

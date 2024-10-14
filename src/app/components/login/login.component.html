@@ -1,0 +1,18 @@
+<div class="Login">
+    <div class="centro">
+        <img src="../../../assets/image/urso branco.png" alt="urso branco">
+        <form #loginForm="ngForm">
+            <input  placeholder="Login" name="usuario" id="usuario" [(ngModel)]="usuario">
+            <input type="password" name="senha" id="senha" placeholder="Senha" [(ngModel)]="senha">
+            <div class="wrapper">
+                <input type="submit" value="Login" (click)="verificarAdm()">
+                <mat-icon>portrait</mat-icon>
+            </div>
+            <div class="wrapper">
+                <input type="submit" routerLink="/cadastroAdm" value="Cadastrar"> 
+                <mat-icon>person_add</mat-icon>
+            </div>
+            
+        </form>
+    </div>
+</div>

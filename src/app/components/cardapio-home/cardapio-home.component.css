@@ -1,0 +1,28 @@
+@import url(src/assets/css/reset.css);
+
+.Cardapio-home {
+    height: 1080px;
+    width: 100vw;
+    background-color: #131313;
+    background-image: url("../../../assets/image/background-cardapio-home.png");
+    background-repeat: no-repeat;
+    background-size: cover;
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: center;
+    font-size: 90px;
+    font-family: var(--font-league-spartan);
+    color: #FFFFFF;
+    gap: 580px;
+} 
+
+.pratos { 
+    margin-bottom: 39px;
+    font-weight: 700;
+}
+
+.bebidas {
+    margin-bottom: 39px;
+    font-weight: 700;
+}

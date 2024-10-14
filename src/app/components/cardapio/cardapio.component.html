@@ -1,0 +1,56 @@
+<div class="cardapio">
+  <div class="tabela-div">
+        <table mat-table [dataSource]="dataSource" matSort (matSortChange)="announceSortChange($event)"
+          class="mat-elevation-z8">
+          <!-- Name Column -->
+          <ng-container matColumnDef="nome">
+            <th mat-header-cell *matHeaderCellDef mat-sort-header sortActionDescription="Listar por Nome">
+              Nome
+            </th>
+            <td mat-cell *matCellDef="let element"> {{element.nome}} </td>
+          </ng-container>
+          <!-- Weight Column -->
+          <ng-container matColumnDef="preco">
+            <th mat-header-cell *matHeaderCellDef mat-sort-header sortActionDescription="Listar por Preço">
+              Preço
+            </th>
+            <td mat-cell *matCellDef="let element">R$: {{element.preco}} </td>
+          </ng-container>
+          <!-- Symbol Column -->
+          <ng-container matColumnDef="descricao">
+            <th mat-header-cell *matHeaderCellDef mat-sort-header sortActionDescription="Listar por tipo">
+              Descrição
+            </th>
+            <td mat-cell *matCellDef="let element"> {{element.descricao}} </td>
+          </ng-container>
+          <tr mat-header-row *matHeaderRowDef="displayedColumns"></tr>
+          <tr mat-row *matRowDef="let row; columns: displayedColumns;"></tr>
+        </table>
+
+  </div>
+  <div class="footer">
+      <div class="info">
+          <div class="urso">
+              <h1>BEAR</h1>
+              <img src="../../../assets/image/urso branco.png" alt="urso branco">
+          </div>
+          <div class="horario">
+              <h1>Horário de Funcionamento</h1>
+              <h2>Quinta-feira a partir das 18h</h2>
+              <h2>Sexta-feira a partir das 18h</h2>
+              <h2>Sábado a partir das 18h</h2>
+              <h2>Domingo a partir das 20h</h2>
+          </div>
+          <div class="contato">
+              <h1>Contato</h1>
+              <h2>Telefone: 11 94002-8922</h2>
+              <h2>Email: reservas@bearbar.com</h2>
+              <h2>Rua P. Sherman, 42 - Pinheiros CEP: 00000-000 - São Paulo</h2>
+              <h2>Domingo a partir das 20h</h2>
+          </div>
+      </div>
+      <div class="copy">
+          <h1><mat-icon>copyright</mat-icon>BEAR - Todos os direitos reservados.</h1>
+      </div>
+  </div>
+</div>

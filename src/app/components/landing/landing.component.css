@@ -1,0 +1,89 @@
+@import url("src/assets/css/base.css");  
+@import url("src/assets/css/reset.css");    
+@import url("src/styles.css");
+
+.Landing {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    overflow-x: hidden;
+    height: calc(100vh - 100px);
+    width: 100vw;
+    border-bottom: #FFC700 2px solid;
+    background-color: #000000;
+    background-image: url("../../../assets/image/landing-img.png");
+    background-repeat: no-repeat;
+    background-size: cover;
+    font-family: var(--font-league-spartan);    
+}
+
+::-webkit-scrollbar{
+   width: 5px;     
+}
+
+.logo-meio {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: flex-end;
+    gap: 10px;
+    margin-top: 88px;
+}
+
+.logo-meio-texto {
+    font-size: 160px; /* rem = pegar tam do figma e dividir por 16 */
+    color: #FFFFFF;
+    font-weight: 600; 
+    margin-bottom: 92px;
+    width: 50%;
+}
+
+.logo-meio-logo {
+    height: 189.5px;
+    width: 166.9px;
+    margin-bottom: 44px;
+}
+
+.slogan {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    margin-bottom: 160px;
+    margin-top: 20.5px;
+    color: #FFC700;
+    font-size: 42px;
+    font-weight: 700;
+    gap:35px
+}
+
+.slogan2 {
+    margin-left: 33px;
+}
+
+
+
+.botoes {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+
+button {
+    margin: 8px;
+    width: 185px;
+    height: 52px;
+    border: 2px solid rgba(255, 255, 255, 0.8);
+    border-radius: 10px;
+    color: white;
+    background-color: #000000;
+    font-family:var(--font-league-spartan);
+    font-size: 22px;
+    font-weight: 700;
+    line-height: 20px;
+}
+
+
+

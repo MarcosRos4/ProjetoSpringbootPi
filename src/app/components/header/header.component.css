@@ -1,0 +1,78 @@
+@import url("src/assets/css/base.css");  
+@import url("src/assets/css/reset.css");    
+@import url("src/styles.css");              
+
+
+.cabecalho{
+    display: flex;
+    flex-direction: row;
+    flex-wrap: nowrap;
+    align-items: center;
+    justify-content: flex-start;
+
+    
+    background: var(--menu-background-color);
+    /* background-color: #131313; */
+
+
+    height: 100px;
+    width: 100vw;
+}
+
+/* logo: ========================================= */
+
+.logo__image{
+    width: 70px;
+    color: var(--logo-color);
+}
+
+.logo__contain{
+    left: 25px;
+    position: absolute;
+    
+
+}
+
+.logo__contain:hover{
+    cursor: pointer;
+}
+
+
+
+
+/* nav: ========================================= */
+
+.nav_lista{
+    display: flex;
+    flex-direction: row;
+    flex-wrap: nowrap;
+
+}
+
+.nav__item{
+    margin: 0px 21px 0px 0px;
+    background-color: noe;
+
+}
+
+.nav__item:first-child{
+    margin: 0px 21px 0px 133px;
+
+}
+
+.nav__item:last-child{
+    margin: 0px 0px 0px 0px;
+
+}
+
+.nav__hiperlink{
+    color: var(--menu-text-color);
+    /* color: #E4E4E4; */
+    font-family: var(--font-league-spartan);
+    font-size: 1.2rem;
+    font-weight: 700;
+    text-decoration: none;
+    text-transform: uppercase;
+
+}
+
