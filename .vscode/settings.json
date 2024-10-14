@@ -1,4 +1,7 @@
 {
     "java.configuration.updateBuildConfiguration": "interactive",
-    "java.compile.nullAnalysis.mode": "disabled"
+    "java.compile.nullAnalysis.mode": "disabled",
+    "java.search.scope": "all",
+    "java.jdt.ls.java.home": "C:\\Program Files\\Java\\jdk-23",
+    "maven.view": "flat"
 }
