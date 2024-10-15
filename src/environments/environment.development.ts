@@ -1,4 +1,4 @@
 export const environment = {
     mock: false,
-    urlApi: 'http://127.0.0.1:2319'
+    urlApi: 'https://backend-the-bear-818252144685.southamerica-east1.run.app'
   };
